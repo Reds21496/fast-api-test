@@ -11,10 +11,9 @@ jobs:
     runs-on: eks_runner
     container: amazon/aws-cli:latest  # Ensures AWS CLI is available
     steps:
-      - name: Install AWS CLI
+      - name: Print identity
         run: |
-          yum install -y aws-cli
-          sleep 120
+          aws sts get-caller-identity
 
       - name: List ECR Repositories
         run: |
