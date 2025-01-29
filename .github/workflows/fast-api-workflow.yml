@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     runs-on: eks_runner
-    container: amazonlinux:2  # Ensures AWS CLI is available
+    container: amazon/aws-cli:latest  # Ensures AWS CLI is available
     steps:
       - name: Install AWS CLI
         run: |
