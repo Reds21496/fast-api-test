@@ -10,3 +10,4 @@ spec:
       repository: Reds21496/fast-api-test
       labels:
         - "eks_runner"
+      serviceAccountName: github-actions-runner

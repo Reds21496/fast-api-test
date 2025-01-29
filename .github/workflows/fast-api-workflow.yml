@@ -9,13 +9,17 @@ on:
 jobs:
   build:
     runs-on: eks_runner
-    container:
-      image: ubuntu:latest
-    steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
-      with:
-        ref: main
+    container: amazonlinux:2  # Ensures AWS CLI is available
 
-    - name: Echo Message
-      run: echo "Hello World"
+<<<<<<< HEAD
+
+=======
+    steps:
+      - name: Install AWS CLI
+        run: |
+          yum install -y aws-cli
+
+      - name: List ECR Repositories
+        run: |
+          aws ecr describe-repositories --region us-east-1
+>>>>>>> c5bd3c8 (Test for connection with AWS)
