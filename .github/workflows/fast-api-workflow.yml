@@ -10,10 +10,6 @@ jobs:
   build:
     runs-on: eks_runner
     container: amazonlinux:2  # Ensures AWS CLI is available
-
-<<<<<<< HEAD
-
-=======
     steps:
       - name: Install AWS CLI
         run: |
@@ -22,4 +18,3 @@ jobs:
       - name: List ECR Repositories
         run: |
           aws ecr describe-repositories --region us-east-1
->>>>>>> c5bd3c8 (Test for connection with AWS)
